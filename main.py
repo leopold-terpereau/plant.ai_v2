@@ -28,7 +28,7 @@ st.write("- Get an automatic diagnosis by clicking on Determine health or specie
 st.subheader("Et voilà ✨")
 
 
-choice_list = ["Species recognition", "Cherry tree 🍒","Strawberry plant 🍓","Corn plant 🌽","Bell pepper plant 🔔","Apple tree 🍏","Grape vine 🍇","Tomato plant 🍅"]
+choice_list = ["Species recognition (Work in progress)", "Cherry tree 🍒","Strawberry plant 🍓","Corn plant 🌽","Bell pepper plant 🔔","Apple tree 🍏","Grape vine 🍇","Tomato plant 🍅"]
 folder_list = ["ResNet50", "Cerise","Fraise","Maïs","Poivron","Pomme","Raisin","Tomate"]
 
 with st.container():
@@ -42,10 +42,11 @@ col1,col2,col3=st.columns(3)
 with col1:
     choice = st.selectbox("Select your plant's species",choice_list,index=5)
 
-if choice == "Species recognition":
-    folder = folder_list[0]
-    file = "/resnet50.h5"
-    resnet = True
+if choice == "Species recognition (Work in progress)":
+     st.write("Work in progress")
+    #folder = folder_list[0]
+    #file = "/resnet50.h5"
+    #resnet = True
 else:
     for i in range(1,len(choice_list)):
         if choice_list[i] == choice:
